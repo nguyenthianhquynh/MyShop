@@ -49,11 +49,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DBContext.cs" />
+    <Compile Include="Inprastructure\DbFactory.cs" />
+    <Compile Include="Inprastructure\Disposable.cs" />
+    <Compile Include="Inprastructure\IDbFactory.cs" />
+    <Compile Include="Inprastructure\IRepository.cs" />
+    <Compile Include="Inprastructure\IUnitOfWork.cs" />
+    <Compile Include="Inprastructure\RepositoryBase.cs" />
+    <Compile Include="Inprastructure\UnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Repositories\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyShop.Common\MyShop.Common.csproj">
+      <Project>{3f0b991a-e019-44da-85dc-227819b94b2c}</Project>
+      <Name>MyShop.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyShop.Model\MyShop.Model.csproj">
+      <Project>{bc21b20e-46b7-4f8e-a515-dc01383b4874}</Project>
+      <Name>MyShop.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
